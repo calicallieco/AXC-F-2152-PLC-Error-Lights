@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.phoenixcontact.com/schema/cliproject">
+  <Id>5fb0746a-747d-4feb-9bed-9582dad070a6</Id>
+  <Version>4.0</Version>
+  <Name>All_Led_Blink</Name>
+  <GenerateDTArrayNameByType>true</GenerateDTArrayNameByType>
+  <GenerateNamespaces>true</GenerateNamespaces>
+  <Target>AXCF2152,2025.6.0 (25.6.0.41)</Target>
+</ProjectSettings>

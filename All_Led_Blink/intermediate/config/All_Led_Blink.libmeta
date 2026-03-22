@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MetaConfigurationDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaVersion="2.0" xmlns="http://www.phoenixcontact.com/schema/metaconfig">
+  <Library name="All_Led_Blink" applicationDomain="CPLUSPLUS">
+    <File path="libAll_Led_Blink.so" />
+    <TypeIncludes>
+      <Include path="All_Led_Blink.typemeta" />
+    </TypeIncludes>
+    <ComponentIncludes>
+      <Include path="All_Led_BlinkComponent/All_Led_BlinkComponent.compmeta" />
+    </ComponentIncludes>
+  </Library>
+</MetaConfigurationDocument>

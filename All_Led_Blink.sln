@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "All_Led_Blink", "All_Led_Blink\All_Led_Blink.vcxproj", "{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - all Targets|x86 = Debug - all Targets|x86
+		Project-specific|x86 = Project-specific|x86
+		Release - all Targets|x86 = Release - all Targets|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Debug - all Targets|x86.ActiveCfg = Debug - all Targets|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Debug - all Targets|x86.Build.0 = Debug - all Targets|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Debug - all Targets|x86.Deploy.0 = Debug - all Targets|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Project-specific|x86.ActiveCfg = Debug AXCF2152,2025.6.0 (25.6.0.41)|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Project-specific|x86.Build.0 = Debug AXCF2152,2025.6.0 (25.6.0.41)|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Project-specific|x86.Deploy.0 = Debug AXCF2152,2025.6.0 (25.6.0.41)|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Release - all Targets|x86.ActiveCfg = Release - all Targets|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Release - all Targets|x86.Build.0 = Release - all Targets|x86
+		{1709DFE3-A7E4-4913-9A33-7DC453A2DBA8}.Release - all Targets|x86.Deploy.0 = Release - all Targets|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75703C95-2245-49F1-8965-E9DA15B28DC8}
+	EndGlobalSection
+EndGlobal

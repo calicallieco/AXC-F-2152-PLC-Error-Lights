@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project InitialTargets="PLCnextCheck" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug - all Targets|x86">
+      <Configuration>Debug - all Targets</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug AXCF2152,2025.6.0 (25.6.0.41)|x86">
+      <Configuration>Debug AXCF2152,2025.6.0 (25.6.0.41)</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release - all Targets|x86">
+      <Configuration>Release - all Targets</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release AXCF2152,2025.6.0 (25.6.0.41)|x86">
+      <Configuration>Release AXCF2152,2025.6.0 (25.6.0.41)</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\All_Led_BlinkComponent.hpp" />
+    <ClInclude Include="src\All_Led_BlinkLibraryInfo.hpp" />
+    <ClInclude Include="src\All_Led_BlinkProgram.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\All_Led_BlinkComponent.cpp" />
+    <ClCompile Include="src\All_Led_BlinkProgram.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1709dfe3-a7e4-4913-9a33-7dc453a2dba8}</ProjectGuid>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - all Targets|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WSL_1_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug AXCF2152,2025.6.0 (25.6.0.41)|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WSL_1_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - all Targets|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WSL_1_0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release AXCF2152,2025.6.0 (25.6.0.41)|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WSL_1_0</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <ForcedIncludeFiles>$(ProjectDir)UndefClang.hpp</ForcedIncludeFiles>
+      <CLanguageStandard />
+      <CppLanguageStandard />
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug - all Targets|x86'">$(PLCnCLIMacros)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug AXCF2152,2025.6.0 (25.6.0.41)|x86'">$(PLCnCLIMacros)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release - all Targets|x86'">$(PLCnCLIMacros)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release AXCF2152,2025.6.0 (25.6.0.41)|x86'">$(PLCnCLIMacros)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup>
+    <PLCnCLIProjectType>project</PLCnCLIProjectType>
+    <PLCnCLIProjectVersion>2</PLCnCLIProjectVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - all Targets|x86'">
+    <IncludePath>$(PLCnCLIIncludes)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug AXCF2152,2025.6.0 (25.6.0.41)|x86'">
+    <IncludePath>$(PLCnCLIIncludes)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - all Targets|x86'">
+    <IncludePath>$(PLCnCLIIncludes)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release AXCF2152,2025.6.0 (25.6.0.41)|x86'">
+    <IncludePath>$(PLCnCLIIncludes)</IncludePath>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="PLCnextCheck">
+    <Error Text="PLCnext toolchain is not installed correctly. 'PLCnCLI.targets' file is missing. Reinstall the toolchain!" Condition="!Exists('$(PLCNEXT_TOOLCHAIN_INSTALLDIR)/VSCPP/PLCnCLI.targets')" />
+  </Target>
+  <Import Project="$(PLCNEXT_TOOLCHAIN_INSTALLDIR)/VSCPP/PLCnCLI.targets" Condition="Exists('$(PLCNEXT_TOOLCHAIN_INSTALLDIR)/VSCPP/PLCnCLI.targets')" />
+</Project>
